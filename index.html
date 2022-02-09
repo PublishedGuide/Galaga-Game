@@ -1,0 +1,18 @@
+<!-- Step 1. Project Setup -->
+<!-- as the full inner width canvas set up usually leaves a brief space from the edges of the webpage, we will set margin size to 0 from the beginning-->
+<!-- display: flex in <style> would normally stretch display to full browser height, but if we compact canvas element within <div> like below, we can control that-->
+<!-- justify-content is what we used to center the playable screen canvas on the x-axis, while align items is what is used for y-axis alignment -->
+<style>
+    body {margin: 0; display: flex; justify-content: center; align-items: center; background-color: black;} 
+</style>
+<!--keep paragraph element within the canvas by having it encapsulated in the div element-->
+<div style="position: relative;">
+    <p style="position: absolute; z-index: 10; color: white; left: 10px; top: 10px; margin: 0; font:sans-serif; font-size: 14px">
+        <span>Score:</span> <span id="scoreEl">0</span></p>
+    <canvas></canvas>
+</div>
+<!-- the source (src) attribute we want to add in is that of the index.js file that we are using as out console script-->
+<script src="./index.js"></script>
+<!-- Step 2: Create a player 
+        this work was done in the java script console -->
+<!-- Step 3. Move the player -->
